@@ -7,6 +7,27 @@
     <title>Lingo - Practice!</title>
 </head>
 <body>
+   <script>
+       // api url
+const api_url = 
+      "https://random-word-api.herokuapp.com/word?number=1";
+  
+// Defining async function
+async function getapi(url) {
     
+    // Storing response
+    const response = await fetch(url);
+    
+    // Storing data in form of JSON
+    var data = await response.json();
+    document.write(data[0]);
+    if (response) {
+        hideloader();
+    }
+    show(data);
+}
+// Calling that async function
+getapi(api_url);
+   </script> 
 </body>
 </html>
