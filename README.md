@@ -1,4 +1,4 @@
-# Lingo-Practice
+# Lingo Practice
 
 Have you ever wondered, "I want to be on the Lingo game show! But I don't know enough words!"
 Or, "I need to practice my vocabulary!"
