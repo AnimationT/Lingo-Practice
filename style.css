@@ -1,3 +1,66 @@
 html{
     font-family: 'Gotham Rounded', sans-serif;                                                
 }
+
+h1{
+    color: white;
+    font-size: 100px;
+}
+
+#l{
+    background-color: blue;
+    border: solid gold 3px;
+    border-radius: 5px;
+    width: 120px;
+    position: absolute;
+    z-index: -1;
+    right: 782px;
+}
+
+#i{
+    background-color: orange;
+    width: 120px;
+    border: solid gold 3px;
+    border-radius: 5px;
+    position: absolute;
+    right: 672px;
+    top: 101px;
+}
+
+#n{
+    background-color: green;
+    width: 120px;
+    border: solid gold 3px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    top: 71px;
+    left: 588px;
+}
+
+#g{
+    background-color: red;
+    width: 120px;
+    border: solid gold 3px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    right: 449px;
+    top: 49px;
+    font-size: 80px;
+    height: 110px;
+}
+
+#o{
+    background-color: rgb(255, 166, 0);
+    width: 120px;
+    border: solid gold 3px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: -2;
+    right: 339px;
+    top: 110px;
+    font-size: 90px;
+    height: 111px;
+}
+
