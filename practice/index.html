@@ -5,29 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lingo - Practice!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        .lett{
+            border: black 5px solid;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
+    <div id="word">
+        <text id="1Lett" class="lett"></text>
+        <text id="2Lett" class="lett"></text>
+        <text id="3Lett" class="lett"></text>
+        <text id="4Lett" class="lett"></text>
+        </div>
    <script>
+       var word;
        // api url
 const api_url = 
       "https://random-word-api.herokuapp.com/word?number=1";
   
 // Defining async function
-async function getapi(url) {
+function getapi(url) {
     
     // Storing response
-    const response = await fetch(url);
+    const response = fetch(url);
     
     // Storing data in form of JSON
     var data = await response.json();
-    document.write(data[0]);
-    if (response) {
-        hideloader();
-    }
-    show(data);
+    setTimeout(() => {
+    if (data[0].length != 4) {
+            getapi(api_url);
+        } else {
+           var letters = data[0].match(/.{1}/g);
+           $("#1Lett").innerText = letters[0];
+           $("#2Lett").innerText = letters[1];
+           $("#3Lett").innerText = letters[2];
+           $("#4Lett").innerText = letters[3];
+        }
+}, 50);
 }
 // Calling that async function
 getapi(api_url);
+
    </script> 
 </body>
 </html>
